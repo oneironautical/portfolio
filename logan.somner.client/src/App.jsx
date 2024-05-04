@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
 
 import VideoOverlay from './Components/VideoOverlay/VideoOverlay.jsx';
-import Home from './Routes/Home/Home.jsx';
 import  Example  from './Routes/Client/Client.jsx'
 import TestRoute from './Routes/Tests/TestRoute.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SideStaggerNav from './Components/Navigation/SideStaggerNav.jsx';
+import SideStaggerNav from './Components/Navigation/SideStaggerNav/SideStaggerNav.jsx';
 function App() {
 
     return (

@@ -29,12 +29,17 @@ function TestRoute() {
                 <p className='my-3'>
                     Hello.
                 </p>
+
+
                 <p className='my-3'>
                     My name is Logan. I am a Sr. software engineer who has specialized in enterprise
-                    software solutions within the Microsoft ecosphere for the last decade. I am experienced
-                    in stuff and I know things about writing filler content because I do it alot because I
-                    really hate writing about myself and I'll probably pay someone else to write the content
-                    for this site. Thanks bro. I love you bro. 
+                    software solutions within the Microsoft ecosphere for the last decade. 
+                </p>
+                <p className='my-3'>
+                    This site is an exploration of feelings, ideas, and functionalities that that 
+                    hopefully serve to demonstrate my capabilities as a software engineer. Please
+                    have a look around; there are drastically different options for you to explore. 
+                    And feel free to contact me using the links above.
                 </p>
             </motion.div>
             
