@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 import VideoOverlay from './Components/VideoOverlay/VideoOverlay.jsx';
 import Home from './Routes/Home/Home.jsx';
-import Client from './Routes/Client/Client.jsx'
+import  Example  from './Routes/Client/Client.jsx'
 import TestRoute from './Routes/Tests/TestRoute.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideStaggerNav from './Components/Navigation/SideStaggerNav.jsx';
@@ -18,7 +18,7 @@ function App() {
                         
                         <Routes>
                             {<Route path="/" element={<TestRoute />} />}
-                            <Route path="/client" element={<Client/>} />
+                            <Route path="/client" element={<Example />} />
                         </Routes>
                     </div>
                 </Router>

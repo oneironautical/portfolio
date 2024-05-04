@@ -121,7 +121,7 @@ const LinkLine = ({ mouseY, isHovered, title, animate }) => {
 
     if (title) {
         return (
-            <a href="cock">
+            <a href={((title == '/home') ? '/' : title) }>
                 <motion.div
                     ref={ref}
                     
