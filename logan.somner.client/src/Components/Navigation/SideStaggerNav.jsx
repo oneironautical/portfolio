@@ -2,6 +2,7 @@
 import { AnimatePresence, motion,useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import styles from './SideStaggerNav.module.css'
+import { Link } from 'react-router-dom';
 
 var NUM_LINES = 128;
 
@@ -9,7 +10,7 @@ var navItems = [
     { position: 1, title: "/home" },
     { position: 40, title: "/client" },
     { position: 72, title: "/server" },
-    { position: 104, title: "/about" },
+    { position: 104, title: "/cv" },
 ];
 
 const SideStaggerNav = () => {
@@ -43,7 +44,7 @@ const SideStaggerNav = () => {
                 setIsHovered(false);
 
             }}
-            className="naviBar fixed right-0 top-0 flex h-screen flex-col items-end justify-between py-4 pl-8"
+            className="naviBar fixed right-0 top-0 flex h-screen flex-col z-10 items-end justify-between py-4 pl-8"
         >
             {Array.from(Array(NUM_LINES).keys()).map((i) => {
                 const linkContent = navItems.find((item) => item.position === i + 1);
@@ -133,7 +134,7 @@ const LinkLine = ({ mouseY, isHovered, title, animate }) => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className=" absolute left-0 top-0 z-0 w-full pt-2 font-bold  text-[#014040] transition-colors group-hover:text-[#0896A6]"
+                                className=" absolute left-0 top-0 z-15 w-full pt-2 font-bold z-10  text-[#014040] transition-colors group-hover:text-[#0896A6]"
                             >
                                 {title}
                             </motion.span>
@@ -146,7 +147,7 @@ const LinkLine = ({ mouseY, isHovered, title, animate }) => {
         return (
             <motion.div
                 ref={ref}
-                className=" rounded[sm] relative bg-[#014040] hover:bg-[red] "
+                className=" z-0 relative bg-[#014040] hover:bg-[red] "
                 style={{ width: lineWidth, height: 1 }}
             />
         );

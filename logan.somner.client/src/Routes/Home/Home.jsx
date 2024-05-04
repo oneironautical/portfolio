@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 function Home() {
     return (
-        <p>hello</p>
+        <p className='z-15'>hello</p>
     );
 }
 

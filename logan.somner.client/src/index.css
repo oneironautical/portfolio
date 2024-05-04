@@ -36,11 +36,14 @@ body {
     position: relative;
     color: white;
     width: 100%;
-    height: 100%;
-    z-index: 10;
+    height: 100vh;
+    z-index: 16;
     text-align: center;
     /*align-content: center;*/
     /*display: flex;*/
+    /*border: 1px solid #012626;*/
+    /*background: #012626;*/
+    width: 93vw;
     justify-content: center;
 }
 
