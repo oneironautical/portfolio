@@ -1,0 +1,6 @@
+@logan.somner.Server_HostAddress = http://localhost:5051
+
+GET {{logan.somner.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

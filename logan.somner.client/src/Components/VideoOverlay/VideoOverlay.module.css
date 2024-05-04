@@ -1,0 +1,14 @@
+.videoOverlay {
+    position: absolute;
+    display: grid;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    background-image: url('../../assets/sliced.gif');
+    background-repeat: no-repeat;
+    background-size: 600vw 560vh;
+    /*background-size: 450vw 450vh;*/
+
+    background-position: top right;
+}
