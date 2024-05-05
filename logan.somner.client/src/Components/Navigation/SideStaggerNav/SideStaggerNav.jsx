@@ -13,7 +13,7 @@ var navItems = [
     { position: 104, title: "/cv" },
 ];
 
-const SideStaggerNav = () => {
+const SideStaggerNav = (props) => {
     const [isHovered, setIsHovered] = useState(false);
     const mouseY = useMotionValue(Infinity);
     const [animateFirstLine, setAnimateFirstLine] = useState(false);
@@ -50,26 +50,28 @@ const SideStaggerNav = () => {
                 const linkContent = navItems.find((item) => item.position === i + 1);
                 var returnComponent;
                 if (i + 1 == 1) {
-                    returnComponent = <LinkLine
+                    returnComponent =
+                        <LinkLine
+                        setClientActive={props.setClientActive}
+                        theClientIsActive={props.theClientIsActive }
                         title={linkContent?.title}
                         isHovered={isHovered}
                         mouseY={mouseY}
 
                         key={i}
-                    />
-
+                        />
+                
                     return returnComponent;
 
                     
                 } else {
-                    
                     returnComponent =
                         <LinkLine
                             title={linkContent?.title}
                             isHovered={isHovered}
                             mouseY={mouseY}
                             key={i}
-                        />
+                            />
                     
                     return returnComponent;
                 }
@@ -85,9 +87,10 @@ const SPRING_OPTIONS = {
     damping: 15,
 };
 
-const LinkLine = ({ mouseY, isHovered, title, animate }) => {
+const LinkLine = ({ mouseY, isHovered, title, animate, theClientIsActive, setClientActive }) => {
     const ref = useRef(null);
     const distance = useTransform(mouseY, (val) => {
+
         const bounds = ref.current?.getBoundingClientRect();
 
         return val - (bounds?.y || 0) - (bounds?.height || 0) / 2;
@@ -118,13 +121,18 @@ const LinkLine = ({ mouseY, isHovered, title, animate }) => {
             linkWidth.set(25);
         }
     }, [isHovered]);
-
+    var cc = function () {
+        debugger;
+        setClientActive(!theClientIsActive);
+    }
+    
     if (title) {
+ 
+        
         return (
-            <a href={((title == '/home') ? '/' : title) }>
+            <a href='#' onClick={cc}> {/*{((title == '/home') ? '/' : title)} onClick={cc } >*/}
                 <motion.div
                     ref={ref}
-                    
                     className= " group relative bg-[#014040] transition-colors hover:bg-[#00FF66] link"
                     style={{width: linkWidth, height: 2 }}
                 >
@@ -141,7 +149,7 @@ const LinkLine = ({ mouseY, isHovered, title, animate }) => {
                         )}
                     </AnimatePresence>
                 </motion.div>
-            </a>
+                </a>
         );
     } else {
         return (

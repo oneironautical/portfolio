@@ -1,6 +1,6 @@
 function Client(props) {
     return (
-        <p>{props.active}</p>
+        <p>yeah</p>
     );
 }
 
