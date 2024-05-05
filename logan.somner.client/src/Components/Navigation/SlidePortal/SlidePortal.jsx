@@ -17,7 +17,7 @@ const LinksOverlay = (props) => {
         <motion.div
             animate={props.active ? "open" : "closed"}
             variants={UNDERLAY_VARIANTS}
-            style={{ bottom: 30, left: 30 }}
+            style={{ top: 30, left: 30 }}
             className="fixed z-30 rounded-sm bg-white"
         >
         </motion.div>
