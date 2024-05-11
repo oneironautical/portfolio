@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import styles from './Slide.module.css';
+import styles from './Slide.module.css'; 
 
 //something is wrong because I'm not using AnimatePresence?
 // At least, for sure, something is wrong. 
