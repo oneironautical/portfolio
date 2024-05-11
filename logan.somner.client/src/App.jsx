@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideStaggerNav from './Components/Navigation/SideStaggerNav/SideStaggerNav.jsx';
 import { SlidePortal } from './Components/Navigation/SlidePortal/SlidePortal.jsx';
 import Slide from './Components/Slide/Slide.jsx';
-import ATerribleThing from './Components/aterriblething.jsx'
 
 function App() {
     const [clientActive, setClientActive] = useState(false);
@@ -20,7 +19,6 @@ function App() {
     return (
         <div className='App'>
             <motion.div className='main-container'>
-                {/*<ATerribleThing active={clientActive} />               */}
                 <Slide active={clientActive} exit={changeClientState } />
 
                 <Router>
