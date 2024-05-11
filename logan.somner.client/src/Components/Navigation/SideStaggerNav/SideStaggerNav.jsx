@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 var NUM_LINES = 128;
 
 var navItems = [
-    { position: 1, title: "/home" },
-    { position: 40, title: "/client" },
-    { position: 72, title: "/server" },
-    { position: 104, title: "/cv" },
+    { position: 1, title: "/design" },
+    { position: 40, title: "/corp" },
+    { position: 72, title: "/cv" },
+    { position: 104, title: "/about" },
 ];
 
 const SideStaggerNav = (props) => {
@@ -33,7 +33,8 @@ const SideStaggerNav = (props) => {
             }}
             initial='initialState'
             animate='endState'
-            transition={{ duration: 3, ease: 'easeIn' }}
+            
+            transition={{ duration: 2.5, ease: 'easeIn' }}
 
             onMouseMove={(e) => {
                 mouseY.set(e.clientY);
@@ -71,7 +72,7 @@ const SideStaggerNav = (props) => {
                             isHovered={isHovered}
                             mouseY={mouseY}
                             key={i}
-                            />
+                        />
                     
                     return returnComponent;
                 }
@@ -97,7 +98,7 @@ const LinkLine = ({ mouseY, isHovered, title, animate, theClientIsActive, setCli
     });
 
     // Styles for non-link lines
-    const lineWidthRaw = useTransform(distance, [-80, 0, 80], [15, 500, 15]);
+    const lineWidthRaw = useTransform(distance, [-80, 0, 80], [15, 1300, 15]);
     const lineWidth = useSpring(lineWidthRaw, SPRING_OPTIONS);
 
     // Styles for link lines
@@ -134,7 +135,8 @@ const LinkLine = ({ mouseY, isHovered, title, animate, theClientIsActive, setCli
                 <motion.div
                     ref={ref}
                     className= " group relative bg-[#014040] transition-colors hover:bg-[#00FF66] link"
-                    style={{width: linkWidth, height: 2 }}
+                    style={{width: linkWidth, height: 1  }}
+
                 >
                     <AnimatePresence>
                         {isHovered && (
@@ -142,7 +144,7 @@ const LinkLine = ({ mouseY, isHovered, title, animate, theClientIsActive, setCli
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className=" absolute left-0 top-0 z-15 w-full pt-2 font-bold z-10  text-[#014040] transition-colors group-hover:text-[#0896A6]"
+                                className=" absolute left-0 top-0  w-full pt-2 font-bold z-10  text-[#014040] transition-colors group-hover:text-[#0896A6]"
                             >
                                 {title}
                             </motion.span>

@@ -6,19 +6,25 @@ import Example from './Routes/Client/Client.jsx'
 import TestRoute from './Routes/Tests/TestRoute.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SideStaggerNav from './Components/Navigation/SideStaggerNav/SideStaggerNav.jsx';
-import { SlidePortal }  from './Components/Navigation/SlidePortal/SlidePortal.jsx';
+import { SlidePortal } from './Components/Navigation/SlidePortal/SlidePortal.jsx';
+import Slide from './Components/Slide/Slide.jsx';
+import ATerribleThing from './Components/aterriblething.jsx'
+
 function App() {
     const [clientActive, setClientActive] = useState(false);
     function changeClientState() {
+        console.log(clientActive)
         setClientActive(!clientActive);
     }
 
     return (
         <div className='App'>
             <motion.div className='main-container'>
-                <VideoOverlay />
-                <SlidePortal active={clientActive} setClientActive={setClientActive } />
+                {/*<ATerribleThing active={clientActive} />               */}
+                <Slide active={clientActive} exit={changeClientState } />
+
                 <Router>
+
                     <div className='content'>
                         
                         <Routes>

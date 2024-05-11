@@ -19,28 +19,36 @@ function TestRoute() {
             <motion.div
                 ref={ref}
                 variants={{
-                    initialState: { opacity: 0 }, endState: { opacity: 1 }
+                    initialState: { opacity: 0, y: 25 }, endState: { opacity: 1, y: 0 }
                 }}
                 initial='initialState'
                 animate='endState'
-                transition={{duration: 3, delay: 1, ease: 'easeIn'}}
+                transition={{duration: 1, delay: .75, ease: 'easeIn'}}
                 className={styles.testContainer}  >
 
-                <p className='my-3'>
+                <p className=''>
                     Hello.
                 </p>
 
 
-                <p className='my-3'>
-                    My name is Logan. I am a Sr. software engineer who has specialized in enterprise
-                    software solutions within the Microsoft ecosphere for the last decade. 
+                <p className='my-8'>
+                    My name is <span className={styles.censored }>Logan</span>. I am a Sr. software engineer who has spent the last decade specializing in building custom enterprise
+                    software solutions within the Microsoft ecosphere. While the bulk of my past
+                    work has been server-side and corporate serving, I have recently started to focus more on the subjective experiential side of the
+                    this craft. Or in other words, I have recently started practicing UX design and UI implimentation with more artistic notions in mind.
                 </p>
-                <p className='my-3'>
-                    This site is an exploration of feelings, ideas, and functionalities that that 
-                    hopefully serve to demonstrate my capabilities as a software engineer. Please
-                    have a look around; there are drastically different options for you to explore. 
-                    And feel free to contact me using the links above.
+                <p className='my-8'>
+                    This site is an exploration of various ideas built with the intention
+                    of honing my client-side chops. Please,
+                    have a look around. The experiments range from clean and corporate to weird and annoying.  
                 </p>
+
+                <p className='my-8'>
+                    While I am currently contentedly employed in a full time capacity, I am always open to hearing of opportunities
+                    to build unique and beautiful tools, or to volunteer my skills to causes that I find worth while. Feel 
+                    free to reach out.
+                </p>
+              
             </motion.div>
             
         </>

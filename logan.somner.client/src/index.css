@@ -1,10 +1,21 @@
 
 /*
+    colors from the video
     black:#02080D
     lightest:#0A89A6
     light: #0896A6
     dark:#014040
     darkest #012626
+
+    generated palette from lightest
+
+    lightest: #0A89A6
+    dark grey: #334A52
+    light grey: #97AFB9
+    light lavender: #9770A0
+    dark  lavender: #63406D
+
+
 */
 
 
@@ -13,17 +24,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "NueBook"; /*Can be any text*/
+    src: local("NueBook"), url("./fonts/PPNeueMontrealMono-Book.otf") format("truetype");
+}
+
+
+
 body {
-    background-color: black;
+    background-color: #161616;
     padding: 0;
     margin: 0;
     overflow: hidden;
-    color: whitesmoke;
-    font-size: 1.5em;
-    font-family: "Inter", sans-serif;
+    color: #97AFB9;
+    font-size: 1em;
 }
 
 .main-container {
+    font-family: NueBook;
+    font-weight: 400;
+    line-height: 35px;
     background-color:none;
     position: relative;
     overflow: hidden;
@@ -34,31 +55,28 @@ body {
 .content {
     display: grid;
     position: relative;
-    color: white;
+    color: #97AFB9;
     width: 100%;
     height: 100vh;
     z-index: 16;
     text-align: center;
-    /*align-content: center;*/
-    /*display: flex;*/
-    /*border: 1px solid #012626;*/
-    /*background: #012626;*/
+    overflow: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
     width: 93vw;
     justify-content: center;
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
 
 .naviBar{
     z-index: 15;
 }
 
-#welcome {
-    width: 70vw;
-    height: 50vh;
-    background-color: white;
-    color: black;
-    z-index: 20;
-   
-}
+
 
 
 

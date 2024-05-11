@@ -1,0 +1,33 @@
+.backdrop {
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(1px);
+    height:100%;
+    width: 100%;
+    padding:2%;
+    align-content:center;
+}
+.slide {
+    border: 1px solid #97AFB9;
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    font-family: NueBook;
+    font-size: 1em;
+    padding: 4%;
+}
+
+.exit{
+    position:absolute;
+    right:100px;
+}
+
+.exit:hover{
+    color:red;
+}
+
+.slideContent{
+    padding-top: 8%;
+    padding-left: 10%;
+    font-size: 1.5em;
+}
+

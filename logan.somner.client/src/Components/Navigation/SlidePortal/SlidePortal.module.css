@@ -1,0 +1,48 @@
+@import '../../../index.css';
+
+.designslide {
+    font-family: NueBook;
+    font-size: 1em;
+    padding: 4%;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    border: 1px solid #97AFB9;  
+    /*filter: blur(2px);*/
+    /*background: #161616;*/
+}
+
+    .designslide .exit {
+        align-content:center;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        color: #97AFB9;
+        font-weight: 400;
+        font-family: NueBook;
+    }
+
+    .designslide .designContent {
+        font-family: inherit;
+        font-size: inherit;
+        color: #97AFB9;
+        width: 99%;
+        height: inherit;
+        /*border: 1px solid #97AFB9;*/
+        text-align: left;
+        /*align-content:center;*/
+        padding: 2.5%;
+    }
+
+    .designslide .lavenderHighlight {
+        color: #9770A0;
+    }
+
+    .designslide .blueHighlight {
+        color: #0A89A6;
+        font-size: 2em;
+    }
+
+.paleYellowHighlight {
+    color: #FDE992;
+}
